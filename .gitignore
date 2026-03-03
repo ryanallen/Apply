@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# npm
+node_modules/
+package-lock.json
+
+# Setup handoff (agent-created, do not commit)
+.claude/skills/setup/setup-handoff.marker
