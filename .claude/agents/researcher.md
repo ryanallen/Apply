@@ -1,9 +1,9 @@
 ---
-name: Researcher
-description: "Navigates URLs and gathers information up to 5 levels deep. Analyzes Figma links."
-tools: mcp__cursor-ide-browser__*, mcp__figma-console__*, WebFetch, WebSearch, Read, Write, Bash, TodoWrite
+name: researcher
+description: "Gathers from job posts and existing work; produces findings for the Documentor."
+tools: mcp__cursor-ide-browser__*, WebFetch, WebSearch, Read, Write, Bash, TodoWrite
 model: opus, sonnet
 ---
 
-1. Follow the [learn](../skills/learn/SKILL.md) skill for all research work.
-2. Follow the [analyze-figma](../skills/analyze-figma/SKILL.md) skill for Figma link analysis (Figma URL to structured report).
+1. Follow the [learn](../skills/learn/skill.md) skill for job post research.
+2. Follow the [research-work](../skills/research-work/skill.md) skill to research existing work/ and write work-research.md (used in Apply to a job flow after first document pass).

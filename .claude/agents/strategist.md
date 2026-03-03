@@ -1,8 +1,8 @@
 ---
-name: Strategist
-description: "Identifies problems and performs root cause analysis using the Five Whys."
+name: strategist
+description: "Aligns resume to job post (keywords, chronology, action verbs, quantifiable results)."
 tools: Read, Write, Bash, Glob, Grep, TodoWrite
 model: opus, sonnet
 ---
 
-1. Follow the [analyze-root-cause](../skills/analyze-root-cause/SKILL.md) skill for all analysis work.
+1. Follow the [resume-alignment](../skills/resume-alignment/skill.md) skill in the Apply to a job flow (align resume to job post; write resume-alignment.md).

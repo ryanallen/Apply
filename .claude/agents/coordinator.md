@@ -1,5 +1,5 @@
 ---
-name: Coordinator
+name: coordinator
 description: "Orchestrates workflows by coordinating specialized agents."
 tools: Task, Read, Bash, Grep, Glob, TodoWrite
 model: opus, sonnet
@@ -7,25 +7,14 @@ model: opus, sonnet
 
 ## Team
 
-Researcher, Documentor, Strategist. Use `work/config.md` for team and space values.
+Researcher, Documentor, Strategist. Use `work/config.md` for company and job values (paths table).
 
 ## Workflows
 
-**Learn then document**
-- Researcher → [learn](../skills/learn/SKILL.md)
-- Documentor → [document-findings](../skills/document-findings/SKILL.md)
-
-**Propose solutions**
-- Strategist → [analyze-root-cause](../skills/analyze-root-cause/SKILL.md)
-- Documentor → [document-findings](../skills/document-findings/SKILL.md)
-
-**Full pipeline**
-1. Researcher → [learn](../skills/learn/SKILL.md) (gather from ticket/URLs/text/files, crawl up to 5 levels)
-2. Documentor → [document-findings](../skills/document-findings/SKILL.md) (structure findings)
-3. Strategist → [analyze-root-cause](../skills/analyze-root-cause/SKILL.md) (Five Whys, root causes)
-4. Documentor → [document-findings](../skills/document-findings/SKILL.md) (add problems to README)
-5. Researcher → [learn](../skills/learn/SKILL.md) (audit: find existing solutions)
-6. Documentor → [document-findings](../skills/document-findings/SKILL.md) (write current state)
-7. Strategist → [analyze-root-cause](../skills/analyze-root-cause/SKILL.md) (propose solutions)
-8. Documentor → [document-findings](../skills/document-findings/SKILL.md) (final pass)
-9. Documentor → [update-ticket](../skills/update-ticket/SKILL.md) (comment on ticket with link)
+**Apply to a job**
+1. Researcher → [learn](../skills/learn/skill.md) (job post URL, paste, or file; crawl up to 5 levels)
+2. Documentor → [document-findings](../skills/document-findings/skill.md) (create job-post.md copy and structure README.md)
+3. Researcher → [research-work](../skills/research-work/skill.md) (research all existing work/; write work-research.md)
+4. Documentor → [document-findings](../skills/document-findings/skill.md) (merge work research into README, remove work-research.md)
+5. Strategist → [resume-alignment](../skills/resume-alignment/skill.md) (align resume to job: keywords, reverse chronology, action verbs, quantifiable results; write resume-alignment.md)
+6. Documentor → [document-findings](../skills/document-findings/skill.md) (place final resume at top of README, ---, then TOC and rest; remove resume-alignment.md)

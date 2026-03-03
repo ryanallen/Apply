@@ -11,3 +11,7 @@ package-lock.json
 
 # Setup handoff (agent-created, do not commit)
 .claude/skills/setup/setup-handoff.marker
+
+# Work folder (keep only config.md tracked)
+work/*
+!work/config.md
