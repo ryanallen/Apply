@@ -2,6 +2,12 @@
 
 An autonomous agent and modular skill set designed to automate job applications.
 
+## How to use
+
+1. Get this repo: use the template button above to create your copy (or clone/download).
+2. Open the folder as a project in your editor (Cursor, Claude Code, Codex, etc.).
+3. Ask the assistant to help you apply to a job. It will ask for company and job name, then for the job post (URL, paste, or file), and run the workflow.
+
 ---
 
 ## 🤖 Agents and their skills

@@ -7,6 +7,17 @@ description: Take research output and produce structured, enhanced markdown docu
 
 Take research output and produce structured, enhanced markdown documentation.
 
+## 📌 Rules
+
+- Never use absolute filesystem paths in links. All links must be relative to the document they appear in
+- Never invent information not present in source material. No placeholder or made-up content anywhere: no fake table rows, no TBD, no example names/dates/artifacts in Deliverables, Project tracking, Roadmap, or any other section. Only real data from source material; leave sections or tables empty when there is nothing to put.
+- In Project tracking > Team: Name must be an individual person (full name). Responsibility must be exactly one of Driver, Approver, Contributor, Informed (DACI). No other roles or labels.
+- When structuring from research that includes a Link tree or Sources section, preserve them in the README (under Sources and Link tree, or under Discovery > Audits for non-job doc types) so the full link tree is always present
+- Always attribute content to its source
+- Use mermaid diagrams for any process with 3+ steps or any hierarchy with 2+ levels
+- Always include a full table of contents after the --- (or after H1 if no resume at top): link to every H2 and H3 section so readers can navigate to all parts of the document
+- Use an emoji in every H2 and H3 heading in the README output
+
 ## 📥 Inputs
 
 1. **Project path** – `work/{company}/{job}/`
@@ -209,14 +220,3 @@ Quality assurance. Production testing (Version | KPI 1 | KPI 2).
 ### 🔄 Next version
 Learnings. Recommendations. Links to new docs.
 ```
-
-## 📌 Rules
-
-- Never use absolute filesystem paths in links. All links must be relative to the document they appear in
-- Never invent information not present in source material. No placeholder or made-up content anywhere: no fake table rows, no TBD, no example names/dates/artifacts in Deliverables, Project tracking, Roadmap, or any other section. Only real data from source material; leave sections or tables empty when there is nothing to put.
-- In Project tracking > Team: Name must be an individual person (full name). Responsibility must be exactly one of Driver, Approver, Contributor, Informed (DACI). No other roles or labels.
-- When structuring from research that includes a Link tree or Sources section, preserve them in the README (under Sources and Link tree, or under Discovery > Audits for non-job doc types) so the full link tree is always present
-- Always attribute content to its source
-- Use mermaid diagrams for any process with 3+ steps or any hierarchy with 2+ levels
-- Always include a full table of contents after the --- (or after H1 if no resume at top): link to every H2 and H3 section so readers can navigate to all parts of the document
-- Use an emoji in every H2 and H3 heading in the README output

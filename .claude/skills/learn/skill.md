@@ -7,6 +7,15 @@ description: Gather from a job post (URL, paste, or file) and follow links up to
 
 Accepts a job post as input (URL, pasted text, or file), derives starting URLs and level-0 content, then navigates recursively up to 5 levels deep. Writes findings to the project README so the Documentor can read them and create a copy of the job post in the work folder.
 
+## Rules
+
+- Track all visited URLs to avoid loops
+- Prefer depth-first within the focus area, breadth-first otherwise
+- Extract all info, role requirements, responsibilities, application instructions, and company/benefits info
+- For pages that require authentication or permissions, use Playwright in Chrome; if still inaccessible, ask the user to log in and wait for confirmation before retrying
+- Summarize content when appropriate; if data is important copy it verbatim
+- **Clickable links:** Every URL in the output (Sources table, Link Tree, Findings source lines) must be written as a markdown link `[title](url)`. Never output a bare URL or title-only line; always use `[title](url)` so links are clickable in the README.md.
+
 ## Inputs
 
 1. **Input** (one or more of):
@@ -14,10 +23,13 @@ Accepts a job post as input (URL, pasted text, or file), derives starting URLs a
    - **Pasted job text** – Extract URLs (company site, application link, benefits, etc.) and use as starting URLs; full text is level-0 content.
    - **File path(s)** – Read file(s), extract URLs and use as starting URLs; file content is level-0 content.
    - **Image path(s)** – Describe or extract text/URLs from image (e.g. screenshot of job post); use any URLs as starting URLs; description or extracted text is level-0 content.
+
+**If no job post input is provided** (no URL, file, paste, or image), ask the user for one before proceeding. Do not start the process until you have at least one of these inputs.
+
 2. **Output path** – `work/{company}/{job}/README.md` (single file for all findings; do not create other note or output files). Documentor reads from this path and also creates a copy of the job post in the same folder. **One folder, one README.md:** never create a new folder or new README. If you discover a new topic or requirement, add it into this same README. Multiple findings all live in this one file.
 3. **Focus area** – Optional keywords or topics to prioritize when deciding which links to follow (e.g. benefits, team, culture, application process).
 
-If input or output path is missing, ask the user before proceeding.
+If output path (company/job) is missing, ask the user before proceeding.
 
 Valid company and job values are defined in `work/config.md`. Use the Paths table (Company | Job) for the folder structure.
 
@@ -104,12 +116,3 @@ If level-0 content exists, include it first:
   - [Child Page](url)
     - [Grandchild Page](url)
 ```
-
-## Rules
-
-- Track all visited URLs to avoid loops
-- Prefer depth-first within the focus area, breadth-first otherwise
-- Extract all info, role requirements, responsibilities, application instructions, and company/benefits info
-- For pages that require authentication or permissions, use Playwright in Chrome; if still inaccessible, ask the user to log in and wait for confirmation before retrying
-- Summarize content when appropriate; if data is important copy it verbatim
-- **Clickable links:** Every URL in the output (Sources table, Link Tree, Findings source lines) must be written as a markdown link `[title](url)`. Never output a bare URL or title-only line; always use `[title](url)` so links are clickable in the README.md.

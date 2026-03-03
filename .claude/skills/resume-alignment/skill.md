@@ -7,6 +7,12 @@ description: Align resume content with the job post using keywords, reverse chro
 
 Read the job post and existing work (README, work-research, refs), apply alignment rules, and write the new aligned resume to `work/{company}/{job}/resume-alignment.md`. The Documentor will place this at the top of the README and remove the file.
 
+## Rules
+
+- Only write to resume-alignment.md. Do not modify README.md or job-post.md.
+- Use only real experience and skills from source material; do not invent roles or metrics.
+- Keep the resume concise (one to two pages when rendered).
+
 ## Inputs
 
 1. **Project path** – `work/{company}/{job}/` (has README.md, job-post.md, and possibly work-research.md or merged Existing work in README).
@@ -37,9 +43,3 @@ Apply the four rules: weave in keywords, reorder experience (most relevant first
 
 ### 4. Write resume-alignment.md
 Write the aligned resume to `work/{company}/{job}/resume-alignment.md`. Use clear markdown (headings, bullets). The Documentor will place this at the top of the README, add ---, then the rest of the doc. Do not add the --- yourself; do not modify the README.
-
-## Rules
-
-- Only write to resume-alignment.md. Do not modify README.md or job-post.md.
-- Use only real experience and skills from source material; do not invent roles or metrics.
-- Keep the resume concise (one to two pages when rendered).
