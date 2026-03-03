@@ -99,15 +99,15 @@ Read the project README (learn skill output) from the source path. Identify Leve
 ### 1b. 📁 Merge work research (if present)
 If `work/{company}/{job}/work-research.md` exists: read it, add an **📁 Existing work** section to the README (after Application process or before Sources). Include the work-research content (existing applications, work history summary, relevant experience). Update the README table of contents to link to it. Then delete work-research.md.
 
-### 1c. 📄 Place final resume at top (if present)
-If `work/{company}/{job}/resume-alignment.md` exists: place its full content at the **very top** of the README (before anything else). Then add a horizontal rule `---` immediately after the resume. Then ensure the document has a **table of contents** right after the --- linking to every H2 and H3 in the rest of the document. All content below the --- (role summary, requirements, existing work, sources, link tree, etc.) stays under that. Use emoji in every section header below the ---. Then delete resume-alignment.md.
+### 1c. 📄 Place cover letter and resume at top (if present)
+If `work/{company}/{job}/cover-letter.md` or `work/{company}/{job}/resume-alignment.md` exists: place **cover letter** at the **very top** of the README (if cover-letter.md exists, use its full content first). Then add a horizontal rule `---`. Then place the **resume** (full content of resume-alignment.md if present). Then add a second `---`. Then ensure the document has a **table of contents** right after that linking to every H2 and H3 in the rest of the document. All content below the second --- (role summary, requirements, existing work, sources, link tree, etc.) stays under that. Use emoji in every section header below the ---. Then delete resume-alignment.md and cover-letter.md.
 
 ### 2. 📑 Organize by Sections
 Map content into the README sections based on document type.
 
 ### 3. ✍️ Write README
-- If resume-alignment content was placed at top, the README starts with that, then ---, then title and navigation.
-- After the --- (or at start if no resume): add a clear title (H1) and a **full table of contents** linking to every H2 and H3 so readers can navigate to all sections.
+- If cover letter and/or resume were placed at top, the README starts with cover letter (if any), then ---, then resume (if any), then ---, then title and navigation.
+- After the second --- (or at start if no cover letter/resume): add a clear title (H1) and a **full table of contents** linking to every H2 and H3 so readers can navigate to all sections.
 - Use an **emoji in every H2 and H3** (e.g. ## 📋 Role summary, ## ✅ Requirements).
 - Use mermaid diagrams where relationships or flows exist.
 - Use tables where comparisons or indexes exist (e.g. requirements list).
@@ -116,10 +116,14 @@ Map content into the README sections based on document type.
 
 ### 5. 📐 README structure
 
-**For job applications** (when source is learn output for a job post), use this structure. **Order:** (1) Final resume content at very top if resume-alignment.md was merged, (2) horizontal rule `---`, (3) H1 title, (4) full table of contents linking to every H2 and H3 below, (5) sections with emoji in every header. Only include sections for which source material provides real data; no placeholders or made-up content.
+**For job applications** (when source is learn output for a job post), use this structure. **Order:** (1) Cover letter at very top if cover-letter.md was merged, (2) first `---`, (3) Resume if resume-alignment.md was merged, (4) second `---`, (5) H1 title, (6) full table of contents linking to every H2 and H3 below, (7) sections with emoji in every header. Only include sections for which source material provides real data; no placeholders or made-up content.
 
 ```markdown
-[Optional: full final resume content from resume-alignment when present]
+[Optional: full cover letter from cover-letter.md when present]
+
+---
+
+[Optional: full resume from resume-alignment.md when present]
 
 ---
 
@@ -127,6 +131,7 @@ Map content into the README sections based on document type.
 
 - [📋 Role summary](#-role-summary)
 - [✅ Requirements](#requirements)
+- [⏱ Years of experience required](#-years-of-experience-required)
 - [📌 Responsibilities](#responsibilities)
 - [📮 Application process](#application-process)
 - [📄 Job post (full copy)](#-job-post-full-copy)
@@ -141,6 +146,9 @@ One-line role, level, location, and key focus from the job post.
 
 ## ✅ Requirements
 Bullets or table of must-haves and nice-to-haves from the post.
+
+## ⏱ Years of experience required
+One clear line from the job post (e.g. "Total: 12+ years. Leadership: 5+ years." or "Not specified."). Source: learn output Findings > Years of experience required. This drives resume experience cutoff in resume-alignment.
 
 ## 📌 Responsibilities
 Key responsibilities and focus areas.

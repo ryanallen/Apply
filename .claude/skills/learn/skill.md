@@ -12,6 +12,7 @@ Accepts a job post as input (URL, pasted text, or file), derives starting URLs a
 - Track all visited URLs to avoid loops
 - Prefer depth-first within the focus area, breadth-first otherwise
 - Extract all info, role requirements, responsibilities, application instructions, and company/benefits info
+- **Years of experience:** Explicitly find how many years of experience the job requires (e.g. "12+ years", "5 years leadership"). Parse total and any subset; if none stated, note "Not specified".
 - For pages that require authentication or permissions, use Playwright in Chrome; if still inaccessible, ask the user to log in and wait for confirmation before retrying
 - Summarize content when appropriate; if data is important copy it verbatim
 - **Clickable links:** Every URL in the output (Sources table, Link Tree, Findings source lines) must be written as a markdown link `[title](url)`. Never output a bare URL or title-only line; always use `[title](url)` so links are clickable in the README.md.
@@ -71,7 +72,7 @@ For each page visited, capture:
 - **URL** and depth level
 - **Title** and headings structure
 - **Key content** (summarized, not raw HTML) – role requirements, responsibilities, benefits, company info, application steps
-- **Application link** and any instructions
+- **Years of experience required** – Every explicit duration (e.g. "12+ years product design", "5 years design leadership"). Record as total and any subset (e.g. leadership, domain). If none found, record "Not specified".
 - **Outbound links** with context on what they reference
 
 ### 5. Output
@@ -97,11 +98,17 @@ If level-0 content exists, include it first:
 | ... | 1     | ...   | ...    |
 ```
 
-**## Findings** – Extracted content organized by topic (e.g. requirements, responsibilities, benefits, application process):
+**## Findings** – Extracted content organized by topic (e.g. requirements, responsibilities, benefits, application process). **Always include a "Years of experience required" subsection** with a single clear line derived from the job post (e.g. "Total: 12+ years. Leadership: 5+ years." or "Not specified."):
 ```markdown
 ## Findings
 
-### {Topic Heading}
+### Years of experience required
+
+Total: {N}+ years. {Subset if any, e.g. Leadership: 5+ years.} Or: Not specified.
+
+> Source: [page title or URL](url) (depth {N})
+
+### {Other topic heading}
 
 {Summarized content}
 
