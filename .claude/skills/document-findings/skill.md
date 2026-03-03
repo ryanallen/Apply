@@ -20,18 +20,16 @@ Take research output and produce structured, enhanced markdown documentation.
 
 ## 📥 Inputs
 
-1. **Project path** – `work/{company}/{job}/`
+1. **Project path** – `work/{company}/{job}/`. Use `work/config.md`.
 2. **Source material** – Research output from the learn skill (README.md content, including Level-0 job post and findings).
 3. **Document type** – One of: `research`, `analysis`, `solutions`, `project-overview`
 
 If the project path or source material is missing, ask the user before proceeding.
 
-Valid company and job values are defined in `work/config.md` (Paths table: Company | Job).
-
 ## 📤 Output
 
 1. **Job post copy** – Create `work/{company}/{job}/job-post.md` with the full job post content (the Level-0 input from the learn output). This is a direct copy of the job listing for reference when drafting applications.
-2. **README** – `work/{company}/{job}/README.md`. Structured documentation (role summary, requirements, application process, link tree). When you discover or document new topics, add them to this README. Do not create other notes or drafts; use this single README plus job-post.md.
+2. **README** – `work/{company}/{job}/README.md`. Structured documentation (role summary, requirements, application process, link tree). Single README plus job-post.md per `work/config.md`. When you discover or document new topics, add them to this README.
 
 ## 📐 Markdown Standards
 

@@ -4,9 +4,9 @@ An autonomous agent and modular skill set designed to automate job applications.
 
 ## How to use
 
-1. Get this repo: use the template button above to create your copy (or clone/download).
+1. Get this repo: [Use this template](https://github.com/ryanallen/Apply/generate) to create your copy (or clone/download).
 2. Open the folder as a project in your editor (Cursor, Claude Code, Codex, etc.).
-3. Ask the assistant to help you apply to a job. It will ask for company and job name, then for the job post (URL, paste, or file), and run the workflow.
+3. Ask the assistant to help you apply to a job. Share the job link, paste the listing, or upload a file or screenshot. The assistant infers the company and role from that and runs the workflow.
 
 ---
 

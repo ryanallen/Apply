@@ -5,7 +5,7 @@ description: Gather from a job post (URL, paste, or file) and follow links up to
 
 # Learn
 
-Accepts a job post as input (URL, pasted text, or file), derives starting URLs and level-0 content, then navigates recursively up to 5 levels deep. Writes findings to the project README so the Documentor can read them and create a copy of the job post in the work folder.
+Accepts a job post as input (URL, pasted text, or file), derives starting URLs and level-0 content, then navigates recursively up to 5 levels deep. Writes findings to the project README for the Documentor (who creates job-post.md and structures the README).
 
 ## Rules
 
@@ -26,12 +26,12 @@ Accepts a job post as input (URL, pasted text, or file), derives starting URLs a
 
 **If no job post input is provided** (no URL, file, paste, or image), ask the user for one before proceeding. Do not start the process until you have at least one of these inputs.
 
-2. **Output path** – `work/{company}/{job}/README.md` (single file for all findings; do not create other note or output files). Documentor reads from this path and also creates a copy of the job post in the same folder. **One folder, one README.md:** never create a new folder or new README. If you discover a new topic or requirement, add it into this same README. Multiple findings all live in this one file.
+2. **Output path** – `work/{company}/{job}/README.md` from `work/config.md`. Single README per job (see config). Documentor creates job-post.md from this output.
 3. **Focus area** – Optional keywords or topics to prioritize when deciding which links to follow (e.g. benefits, team, culture, application process).
 
-If output path (company/job) is missing, ask the user before proceeding.
+Use `work/config.md` for output path.
 
-Valid company and job values are defined in `work/config.md`. Use the Paths table (Company | Job) for the folder structure.
+If no job post yet, ask for it (link, paste, or file).
 
 ## Process
 
@@ -39,7 +39,7 @@ Valid company and job values are defined in `work/config.md`. Use the Paths tabl
 
 From the given input, produce:
 - **Starting URL(s)** – Zero or more URLs to crawl. If none (only pasted text with no links), write level-0 content only to output and skip crawl.
-- **Level-0 content** – Raw or summarized content from the input (job post body, pasted text, file content, image description). Include this in the output so the documentor can structure it and create a copy of the job post.
+- **Level-0 content** – Raw or summarized content from the input (job post body, pasted text, file content, image description). Include in the output for the Documentor.
 
 ### 2. Fetch Starting URLs
 
@@ -76,7 +76,7 @@ For each page visited, capture:
 
 ### 5. Output
 
-Write to the project README.md. This file is the handoff to the Documentor (Documentor reads from this path, restructures it, and creates a copy of the job post in the same folder).
+Write to the project README (handoff to Documentor).
 
 If level-0 content exists, include it first:
 

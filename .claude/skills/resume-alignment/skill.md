@@ -15,11 +15,11 @@ Read the job post and existing work (README, work-research, refs), apply alignme
 
 ## Inputs
 
-1. **Project path** – `work/{company}/{job}/` (has README.md, job-post.md, and possibly work-research.md or merged Existing work in README).
+1. **Project path** – `work/{company}/{job}/`. Use `work/config.md`. Has README.md, job-post.md, and possibly work-research.md or merged Existing work in README.
 2. **Job post** – `work/{company}/{job}/job-post.md`.
 3. **Resume source** – Existing resume content from work/ (READMEs in other company/job folders, work/ref/work-history/README.md, or Existing work section in current README).
 
-If project path or job post is missing, ask the user before proceeding.
+If the project path or job post is missing, ask the user before proceeding.
 
 ## Alignment rules
 

@@ -15,12 +15,10 @@ Read all content under `work/` (past applications, refs, work history) and write
 
 ## Inputs
 
-1. **Project path** – `work/{company}/{job}/` (the current job you are applying to). Output goes here.
-2. **Work root** – `work/` (read from here). Use `work/config.md` paths table; also scan for all `work/{company}/{job}/` and `work/ref/work-history/` folders.
+1. **Project path** – `work/{company}/{job}/` from `work/config.md`. Output goes here. If a folder for that company/job already exists and the user might mean a different role, offer the choice: update that one or create a new job folder (do not ask them to type). If they choose new, add the new company/job to config and use it.
+2. **Work root** – `work/` (read from here). Scan all `work/{company}/{job}/` and `work/ref/work-history/` folders that contain README.md.
 
-**If there is no work to research** (no READMEs under work/ other than the current project, or work/ is effectively empty): ask the user to provide files, links, or pasted data about their work history or past applications. Alternatively, offer the option to go into plan mode so the assistant can help them figure out and structure their work history. Do not write an empty work-research.md; wait for input or plan mode.
-
-**Project path:** Infer `work/{company}/{job}/` from the job post link or data already gathered. Ask the user to confirm it is the right path (or the right new folder to create). If a folder for that company/job already exists, ask whether to update that one or create a new job folder; if they choose new, create a new job folder (e.g. same company, different job name) and use it.
+**If there is no work to research** (no READMEs under work/ other than the current project, or work/ is effectively empty): ask the user to provide files, links, or pasted data about their work history or past applications. Alternatively, offer plan mode. Do not write an empty work-research.md; wait for input or plan mode.
 
 ## Process
 
