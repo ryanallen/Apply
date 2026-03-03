@@ -28,8 +28,7 @@ If the project path or source material is missing, ask the user before proceedin
 
 ## 📤 Output
 
-1. **Job post copy** – Create `work/{company}/{job}/job-post.md` with the full job post content (the Level-0 input from the learn output). This is a direct copy of the job listing for reference when drafting applications.
-2. **README** – `work/{company}/{job}/README.md`. Structured documentation (role summary, requirements, application process, link tree). Single README plus job-post.md per `work/config.md`. When you discover or document new topics, add them to this README.
+1. **README** – `work/{company}/{job}/README.md`. Single README per job per `work/config.md`. Include the full job post as a section in the README (see README structure). All structured output (role summary, requirements, application process, link tree, job post copy) lives in this file. When you discover or document new topics, add them to this README.
 
 ## 📐 Markdown Standards
 
@@ -87,7 +86,7 @@ Always cite sources inline with markdown links. Group full source lists in table
 - **URLs:** Use `[title](url)` for every source, doc, or external reference.
 - **People:** In Project tracking > Team, give each person a document anchor (`<a id="jane-doe"></a>` before the name, or a heading). Anywhere that person appears (notes, Audits, Deliverables, Artifacts, etc.), link their name to that anchor (`[Jane Doe](#jane-doe)`).
 - **Tickets:** When a ticket ID or URL exists, link it (e.g. `[ICT-123](url)` or link the ID).
-- **Job post:** The copy lives in `job-post.md` in the same folder as the README; link to it from README when relevant.
+- **Job post:** The full job post lives in the README in a **📄 Job post (full copy)** section; link to it from the table of contents.
 - **Artifacts / docs:** If an artifact or doc has a URL, link it.
 
 When in doubt, add the link.
@@ -103,13 +102,10 @@ If `work/{company}/{job}/work-research.md` exists: read it, add an **📁 Existi
 ### 1c. 📄 Place final resume at top (if present)
 If `work/{company}/{job}/resume-alignment.md` exists: place its full content at the **very top** of the README (before anything else). Then add a horizontal rule `---` immediately after the resume. Then ensure the document has a **table of contents** right after the --- linking to every H2 and H3 in the rest of the document. All content below the --- (role summary, requirements, existing work, sources, link tree, etc.) stays under that. Use emoji in every section header below the ---. Then delete resume-alignment.md.
 
-### 2. 📋 Create Job Post Copy
-Write the full job post content to `work/{company}/{job}/job-post.md`. Use the Level-0 (input) section from the learn output. Preserve formatting and structure so it is a usable reference for drafting applications.
-
-### 3. 📑 Organize by Sections
+### 2. 📑 Organize by Sections
 Map content into the README sections based on document type.
 
-### 4. ✍️ Write README
+### 3. ✍️ Write README
 - If resume-alignment content was placed at top, the README starts with that, then ---, then title and navigation.
 - After the --- (or at start if no resume): add a clear title (H1) and a **full table of contents** linking to every H2 and H3 so readers can navigate to all sections.
 - Use an **emoji in every H2 and H3** (e.g. ## 📋 Role summary, ## ✅ Requirements).
@@ -129,10 +125,11 @@ Map content into the README sections based on document type.
 
 # {Role Title} at {Company}
 
-- [📋 Role summary](#role-summary)
+- [📋 Role summary](#-role-summary)
 - [✅ Requirements](#requirements)
 - [📌 Responsibilities](#responsibilities)
 - [📮 Application process](#application-process)
+- [📄 Job post (full copy)](#-job-post-full-copy)
 - [📁 Existing work](#existing-work)
 - [🔗 Sources](#sources)
 - [🌐 Link tree](#link-tree)
@@ -150,6 +147,9 @@ Key responsibilities and focus areas.
 
 ## 📮 Application process
 How to apply, link, deadlines, any instructions.
+
+## 📄 Job post (full copy)
+Full job listing content (Level-0 from learn output). Preserve formatting for reference when drafting applications.
 
 ## 📁 Existing work
 Past applications (company | job | key points), work history summary, and relevant experience from work/ refs. Only when work-research was merged.

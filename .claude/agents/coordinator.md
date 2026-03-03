@@ -17,7 +17,7 @@ When the user wants to apply: ask in plain language for the job post. Example: "
 
 **Apply to a job**
 1. Researcher → [learn](../skills/learn/skill.md) (job post: URL, paste, or file; infer company/job from it; crawl up to 5 levels)
-2. Documentor → [document-findings](../skills/document-findings/skill.md) (create job-post.md copy and structure README.md)
+2. Documentor → [document-findings](../skills/document-findings/skill.md) (structure README.md; full job post in README)
 3. Researcher → [research-work](../skills/research-work/skill.md) (research all existing work/; write work-research.md)
 4. Documentor → [document-findings](../skills/document-findings/skill.md) (merge work research into README, remove work-research.md)
 5. Strategist → [resume-alignment](../skills/resume-alignment/skill.md) (align resume to job: keywords, reverse chronology, action verbs, quantifiable results; write resume-alignment.md)

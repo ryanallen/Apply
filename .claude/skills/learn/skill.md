@@ -5,7 +5,7 @@ description: Gather from a job post (URL, paste, or file) and follow links up to
 
 # Learn
 
-Accepts a job post as input (URL, pasted text, or file), derives starting URLs and level-0 content, then navigates recursively up to 5 levels deep. Writes findings to the project README for the Documentor (who creates job-post.md and structures the README).
+Accepts a job post as input (URL, pasted text, or file), derives starting URLs and level-0 content, then navigates recursively up to 5 levels deep. Writes findings to the project README for the Documentor (who structures the README and includes the full job post in it).
 
 ## Rules
 
@@ -26,7 +26,7 @@ Accepts a job post as input (URL, pasted text, or file), derives starting URLs a
 
 **If no job post input is provided** (no URL, file, paste, or image), ask the user for one before proceeding. Do not start the process until you have at least one of these inputs.
 
-2. **Output path** – `work/{company}/{job}/README.md` from `work/config.md`. Single README per job (see config). Documentor creates job-post.md from this output.
+2. **Output path** – `work/{company}/{job}/README.md` from `work/config.md`. Single README per job (see config). Documentor structures README from this output and includes the full job post in the README.
 3. **Focus area** – Optional keywords or topics to prioritize when deciding which links to follow (e.g. benefits, team, culture, application process).
 
 Use `work/config.md` for output path.

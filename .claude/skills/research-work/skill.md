@@ -26,7 +26,7 @@ Read all content under `work/` (past applications, refs, work history) and write
 Read `work/config.md`. Find every folder under `work/` that contains README.md: each `work/{company}/{job}/` and `work/ref/work-history/`. Skip the current project path (so you do not re-read the job you are documenting). **If no work paths remain** (nothing to research), ask for files/links/paste or offer plan mode as above; do not proceed to write work-research.md.
 
 ### 2. Read each README and optional job-post
-For each path, read README.md (and job-post.md if present). Capture:
+For each path, read README.md. Capture:
 - **Past applications:** company, job/role, and a short summary or key points from each README (resume/cover letter content, role focus).
 - **Work history:** from `work/ref/work-history/README.md`, key roles, dates, and highlights.
 - **Relevant experience:** bullets or themes that may align with the current job (skills, domains, metrics).

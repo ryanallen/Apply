@@ -9,17 +9,17 @@ Read the job post and existing work (README, work-research, refs), apply alignme
 
 ## Rules
 
-- Only write to resume-alignment.md. Do not modify README.md or job-post.md.
+- Only write to resume-alignment.md. Do not modify README.md.
 - Use only real experience and skills from source material; do not invent roles or metrics.
 - Keep the resume concise (one to two pages when rendered).
 
 ## Inputs
 
-1. **Project path** – `work/{company}/{job}/`. Use `work/config.md`. Has README.md, job-post.md, and possibly work-research.md or merged Existing work in README.
-2. **Job post** – `work/{company}/{job}/job-post.md`.
+1. **Project path** – `work/{company}/{job}/`. Use `work/config.md`. Has README.md (including Job post section and possibly merged Existing work).
+2. **Job post** – Full job post lives in the README in the **📄 Job post (full copy)** section (or Level-0 / job post content in learn output).
 3. **Resume source** – Existing resume content from work/ (READMEs in other company/job folders, work/ref/work-history/README.md, or Existing work section in current README).
 
-If the project path or job post is missing, ask the user before proceeding.
+If the project path or job post content in README is missing, ask the user before proceeding.
 
 ## Alignment rules
 
@@ -33,7 +33,7 @@ Apply these when writing the aligned resume:
 ## Process
 
 ### 1. Read job post and resume source
-Read job-post.md. Read the current README (Existing work, Role summary, Requirements) and any work/ READMEs or work-research content to get experience bullets, skills, and roles.
+Read the README: Job post (full copy) section or Role summary and Requirements for job context. Read Existing work, and any work/ READMEs or work-research content, for experience bullets, skills, and roles.
 
 ### 2. Extract job keywords and themes
 From the job post, list recurring nouns, skills, and requirements. Note role level and domain.
