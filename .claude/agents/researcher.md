@@ -5,5 +5,5 @@ tools: mcp__cursor-ide-browser__*, WebFetch, WebSearch, Read, Write, Bash, TodoW
 model: opus, sonnet
 ---
 
-1. Follow the [learn](../skills/learn/skill.md) skill for job post research.
-2. Follow the [research-work](../skills/research-work/skill.md) skill to research existing work/ and write work-research.md (used in Apply to a job flow after first document pass).
+1. Follow the [learn](../skills/learn/SKILL.md) skill for job post research.
+2. Follow the [research-work](../skills/research-work/SKILL.md) skill to research existing work/ and write work-research.md (used in Apply to a job flow after first document pass).

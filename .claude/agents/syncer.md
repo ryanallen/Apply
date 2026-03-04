@@ -5,5 +5,5 @@ tools: Read, Bash, Glob, Grep
 model: opus, sonnet
 ---
 
-1. Use [save](../skills/save/skill.md) when the user asks to save or commit.
-2. Use [sync-upstream](../skills/sync-upstream/skill.md) when the user asks to sync, pull, or push.
+1. Use [save](../skills/save/SKILL.md) when the user asks to save or commit.
+2. Use [sync-upstream](../skills/sync-upstream/SKILL.md) when the user asks to sync, pull, or push.

@@ -5,4 +5,4 @@ tools: Read, Write, Bash, Glob, Grep, TodoWrite, mcp__atlassian-rovo__*
 model: opus, sonnet
 ---
 
-1. Follow the [document-findings](../skills/document-findings/skill.md) skill for all documentation work.
+1. Follow the [document-findings](../skills/document-findings/SKILL.md) skill for all documentation work.

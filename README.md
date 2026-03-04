@@ -14,7 +14,7 @@ You can give the system different resumes or past application examples (paste, f
 
 ## 🤖 Agents and their skills
 
-Call a skill by saying its trigger phrase or typing /skill-name. In Claude Code and Cursor, /skills lists all. Skills live under `.claude/skills/` in a kebab-case folder with a file named `skill.md`.
+Call a skill by saying its trigger phrase or typing /skill-name. In Claude Code and Cursor, /skills lists all. Skills live under `.claude/skills/` in a kebab-case folder with a file named `SKILL.md`.
 
 ### 🧭 Coordinator
 Orchestrates researcher, documentor, strategist, and validator for the Apply to a job flow: learn job post (including years of experience), document, research work/, document (merge), ask user for any more info then strategist resume and cover letter alignment, document (cover letter at top, ---, resume, ---, rest), then validate; if validation fails, strategist diagnoses fix and documentor updates until pass. See [coordinator](.claude/agents/coordinator.md).
@@ -78,14 +78,14 @@ Apply/
 │   │   ├── strategist.md
 │   │   └── syncer.md
 │   └── skills/
-│       ├── learn/skill.md
-│       ├── research-work/skill.md
-│       ├── document-findings/skill.md
-│       ├── resume-alignment/skill.md
-│       ├── validate-application/skill.md
-│       ├── save/skill.md
-│       ├── sync-upstream/skill.md
-│       └── update-ticket/skill.md
+│       ├── learn/SKILL.md
+│       ├── research-work/SKILL.md
+│       ├── document-findings/SKILL.md
+│       ├── resume-alignment/SKILL.md
+│       ├── validate-application/SKILL.md
+│       ├── save/SKILL.md
+│       ├── sync-upstream/SKILL.md
+│       └── update-ticket/SKILL.md
 ├── work/
 │   ├── config.md
 │   └── {company}/{job}/
