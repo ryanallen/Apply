@@ -1,6 +1,6 @@
 ---
 name: save
-description: Stage all changes since last commit and create one or more commits with title and description. Use when user says "save", "commit", or /save. Does not push. In Claude Code and Cursor, /skills lists all.
+description: Stage all changes since last commit and create one or more commits with title and description; then, if work/ is the Apply-Work repo, commit and push there. Use when user says "save", "commit", or /save. Does not push Apply repo. In Claude Code and Cursor, /skills lists all.
 ---
 
 # Save
@@ -25,10 +25,9 @@ For multiple commits, repeat with different staging and messages
 
 ## Steps
 
-1. Run `git status` and inspect what changed. Decide one commit or multiple (e.g. one per logical change). Stage per Inputs (all or specific paths).
-2. For each commit: stage the relevant changes, run `git commit -m "<title>" -m "<description>"` (derive from staged changes).
-   Repeat until all changes are committed.
-3. Report the result. Do not run `git push`.
+1. **Apply repo:** Run `git status` and inspect what changed. Decide one commit or multiple (e.g. one per logical change). Stage per Inputs (all or specific paths). For each commit: stage the relevant changes, run `git commit -m "<title>" -m "<description>"` (derive from staged changes). Repeat until all changes are committed. Do not run `git push` for Apply.
+2. **Apply-Work repo:** If `work/` is a git repo (Apply-Work clone), then from repo root run: `cd work && git add -A && git status`. If there are changes to commit, run `git commit -m "<title>" -m "Sync work folder."` (derive title from changed paths or use "Sync work folder") then `git push` to update the private Apply-Work remote.
+3. Report the result (Apply commits; Apply-Work commit and push if done).
 
 ## Error Handling
 
