@@ -48,7 +48,7 @@ Read **Existing work** in the current README and, if available, work/README.md *
 From the job post, list recurring nouns, skills, and requirements. Note role level and domain. **Note the experience cutoff year:** from "Years of experience required" compute the earliest start year to include (e.g. 12 years back from today).
 
 ### 4. Build aligned resume
-Apply the five resume rules: weave in keywords, reorder experience (most relevant first), rewrite bullets with action verbs, add or keep quantifiable results, and cut off experience at the appropriate year. **Match the candidate's format** from step 1b (sections, order, bullet style). Output the resume in the **standard copy-paste format** (step 6): H1 name \- title, H2 contact, # SKILLS with backtick-wrapped phrases, # EXPERIENCE with ## **`Company`** *`— Role`**, date in backticks, bullets as `- `text` `, # AWARDS. Produce a single resume document ready for Documentor to place and user to copy-paste into Google Docs.
+Apply the five resume rules: weave in keywords, reorder experience (most relevant first), rewrite bullets with action verbs, add or keep quantifiable results, and cut off experience at the appropriate year. **Match the candidate's format** from step 1b (sections, order, bullet style). Output the resume in the **standard copy-paste format** (step 6): H1 name and title, H2 contact, # SKILLS as a plain list (one skill phrase per line; no backticks), # EXPERIENCE with ## **Company** *— Role*, date line, bullets as plain text (no backticks), # AWARDS as plain text. Produce a single resume document ready for Documentor to place and user to copy-paste into Google Docs.
 
 ### 5. Build aligned cover letter
 One-page cover letter aligned to the job: role and company, why the candidate is a fit, 1–2 concrete ties to the job. **Match the candidate's usual cover structure** from step 1b (length, opening/body/close). Use the **cover letter output format** below. Incorporate any additional info the user provided (e.g. people at the company, prior collaboration). Clear opening, body, and sign-off.
@@ -57,15 +57,15 @@ One-page cover letter aligned to the job: role and company, why the candidate is
 Write resume to `work/{company}/{job}/resume-alignment.md`, cover letter to `work/{company}/{job}/cover-letter.md`. **Resume output must use the standard copy-paste format** (see below) so the Documentor can place it unchanged and the user can copy-paste the resume block into Google Docs for PDF. Documentor merges: cover letter at top, ---, resume, ---, rest. Do not add --- or modify README.
 
 #### Resume output format (copy-paste to Google Docs)
-Use this structure:
+Use this structure. **Do not use backticks or code formatting** in the resume body; use plain text and markdown headings/emphasis only.
 
-- Line 1: `# {Full Name} \- {Title}` (H1)
-- Line 2: `## [**{Portfolio URL}**](url) \- [email](mailto:email) \- phone` (H2)
-- `# SKILLS` (H1, all caps); then one skill phrase per line, each in backticks, e.g. `` `Consumer Fintech UX` ``. **Maximum 8 skills; each phrase max 40 characters.**
-- `# EXPERIENCE` (H1, all caps); one intro sentence in backticks; then per role: `## **`Company`** *`— Role Title`**` (H2), date line `` `YYYY - YYYY` `` or `` `2018 - Current` ``, bullets `- `bullet text` `
-- `# AWARDS` (H1, all caps); one line in backticks
+- Line 1: `# {Full Name} – {Title}` (H1)
+- Line 2: `## [**{Portfolio URL}**](url) – [email](mailto:email) – phone` (H2)
+- `# SKILLS` (H1, all caps); then one skill phrase per line as a **plain list** (no backticks). Maximum 8 skills; each phrase max 40 characters.
+- `# EXPERIENCE` (H1, all caps); one intro sentence (plain text); then per role: `## **Company** *— Role Title*` (H2), date line (plain, e.g. 2018 – Current), bullets as `- ` plain text (no backticks)
+- `# AWARDS` (H1, all caps); one line plain text (no backticks)
 
-No emoji in the resume. Use this exact markdown so the user can copy-paste the resume from the README into Google Docs unchanged.
+No emoji in the resume. Use this format so the user can copy-paste the resume from the README into Google Docs unchanged.
 
 #### Cover letter output format
 Structure the cover letter as follows. Use the candidate's real name, portfolio, email, and phone from resume source or Existing work; do not invent contact info.
