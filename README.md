@@ -32,7 +32,7 @@ Orchestrates researcher, documentor, strategist, and validator for the Apply to 
 - **validate-application**: After step 6, validate README and resume against all rules (years documented, experience cutoff, document-findings and resume-alignment rules). On FAIL, Strategist diagnoses fix and Documentor applies; repeat until PASS. "validate", "validation", /validate-application.
 
 ### 🔄 Syncer
-- **commit-all**: Stage all and create a commit with derived message. "commit", "commit all", /commit-all. Does not push.
+- **save**: Stage all and create a commit with derived message. "save", "commit", /save. Does not push.
 - **sync-upstream**: Sync from upstream main, push to origin. "sync", "pull", /sync-upstream.
 
 <details>
@@ -81,7 +81,7 @@ Apply/
 │       ├── document-findings/skill.md
 │       ├── resume-alignment/skill.md
 │       ├── validate-application/skill.md
-│       ├── commit-all/skill.md
+│       ├── save/skill.md
 │       ├── sync-upstream/skill.md
 │       └── update-ticket/skill.md
 ├── work/

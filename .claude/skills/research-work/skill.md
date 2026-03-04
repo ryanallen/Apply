@@ -16,17 +16,20 @@ Read all content under `work/` (past applications, refs, work history) and write
 ## Inputs
 
 1. **Project path** – `work/{company}/{job}/` from `work/config.md`. Output goes here. If a folder for that company/job already exists and the user might mean a different role, offer the choice: update that one or create a new job folder (do not ask them to type). If they choose new, add the new company/job to config and use it.
-2. **Work root** – `work/` (read from here). Scan all `work/{company}/{job}/` and `work/ref/work-history/` folders that contain README.md.
+2. **Work root** – `work/`. **Enumerate every folder and file under work/** (directory listing or equivalent). Scan all `work/{company}/{job}/` and `work/ref/work-history/` folders that contain README.md. Do not rely on a single path; use the full enumerated list.
 
 **If there is no work to research** (no READMEs under work/ other than the current project, or work/ is effectively empty): ask the user to provide files, links, or pasted data about their work history or past applications. Alternatively, offer plan mode. Do not write an empty work-research.md; wait for input or plan mode.
 
 ## Process
 
-### 1. List work paths
-Read `work/config.md`. Find every folder under `work/` that contains README.md: each `work/{company}/{job}/` and `work/ref/work-history/`. Skip the current project path (so you do not re-read the job you are documenting). **If no work paths remain** (nothing to research), ask for files/links/paste or offer plan mode as above; do not proceed to write work-research.md.
+### 1. Enumerate work paths
+**List every folder and file under `work/`** (e.g. via directory listing or glob). Do not rely on a single path or config alone. From that list:
+- Identify every `work/{company}/{job}/` and `work/ref/work-history/` folder that contains README.md.
+- Note any other files in each folder (e.g. cover-letter.md, resume-alignment.md, work-research.md).
+- Skip the current project path (so you do not re-read the job you are documenting). **If no work paths remain** (nothing to research), ask for files/links/paste or offer plan mode as above; do not proceed to write work-research.md.
 
 ### 2. Read each README and optional job-post
-For each path, read README.md. Capture:
+For **each** path from step 1, read README.md. Capture:
 - **Past applications:** company, job/role, and a short summary or key points from each README (resume/cover letter content, role focus).
 - **Work history:** from `work/ref/work-history/README.md`, key roles, dates, and highlights.
 - **Relevant experience:** bullets or themes that may align with the current job (skills, domains, metrics).
