@@ -8,7 +8,7 @@ An autonomous agent and modular skill set designed to automate job applications.
 2. Open the folder as a project in your editor (Cursor, Claude Code, Codex, etc.).
 3. Ask the assistant to help you apply to a job. Share the job link, paste the listing, or upload a file or screenshot. The assistant infers the company and role from that and runs the workflow.
 
-You can give the system different resumes or past application examples (paste, files, or links). They are cataloged in `work/` and used to align the next application. If `work/` is empty, the assistant asks for input or plans with you.
+You can give the system different resumes or past application examples (paste, files, or links). They are cataloged in `work/` and used to align the next application. If `work/` is empty, the assistant asks for input or plans with you. Your work (resumes, cover letters, job READMEs) lives only on your machine; `.gitignore` keeps `work/` out of GitHub so it is not pushed when you sync.
 
 ---
 
