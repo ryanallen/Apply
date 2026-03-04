@@ -15,4 +15,4 @@
 Start with `.claude/agents/coordinator.md`.
 
 ---
-`claude.md` is a symlink to this file so Claude Code resolves the same config.
+`CLAUDE.md` points to this file so Claude Code resolves the same config.

@@ -67,8 +67,8 @@ To allow upstream to update it again: `git update-index --no-skip-worktree work/
 
 ```
 Apply/
-├── agents.md
-├── claude.md -> agents.md
+├── AGENTS.md
+├── CLAUDE.md -> AGENTS.md
 ├── .claude/
 │   ├── settings.json
 │   ├── agents/

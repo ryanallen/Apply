@@ -18,7 +18,7 @@ Read job post and existing work from README; ask user for any more info; apply a
 
 1. **Project path** – `work/{company}/{job}/`. Use `work/config.md`. Has README.md (including Job post section and possibly merged Existing work).
 2. **Job post** – Full job post lives in the README in the **📄 Job post (full copy)** section (or Level-0 / job post content in learn output).
-3. **Resume source** – Existing resume content from work/ (READMEs in other company/job folders, work/ref/work-history/README.md, or Existing work section in current README). For format matching, also read work/README.md **Career summary (narrative)** and any **Resume/cover format** note in Existing work when present.
+3. **Resume source** – Existing resume content from work/ (READMEs in other company/job folders, work/Ref/work-history/README.md, or Existing work section in current README). For format matching, also read work/README.md **Career summary (narrative)** and any **Resume/cover format** note in Existing work when present.
 
 If the project path or job post content in README is missing, ask the user before proceeding.
 
